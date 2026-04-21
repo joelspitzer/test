@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,20 +9,16 @@
         nav { background: #eee; text-align: center; padding: 12px; border-bottom: 1px solid #ccc; }
         nav a { margin: 0 15px; text-decoration: none; color: #004a99; font-weight: bold; font-size: 1.1em; }
         
+        /* The main white graphic box is centered */
         .hero { background: white; max-width: 1000px; margin: 40px auto; padding: 50px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
         
-        /* This container aligns the photo and the first line of text */
-        .alignment-block { display: flex; align-items: center; justify-content: center; gap: 40px; margin-bottom: 20px; flex-wrap: wrap; }
+        /* The graphic now fills the top width of its container (max 900px for neatness) */
+        .profile-img-block { width: 100%; max-width: 900px; border-radius: 10px; border: 1px solid #ddd; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 40px; }
         
-        /* The bio graphic - linked to joel.jpeg */
-        .profile-img-block { width: 100%; max-width: 550px; border-radius: 10px; border: 1px solid #ddd; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-        
-        /* The text sentence next to the photo */
-        .headline-sentence { font-size: 2em; line-height: 1.2; color: #004a99; font-weight: bold; text-align: left; max-width: 300px; }
-        
-        h1 { font-size: 2.8em; color: #004a99; margin-top: 0; margin-bottom: 15px; font-weight: bold; }
+        /* All text is now centered below the graphic */
+        h1 { font-size: 2.8em; color: #004a99; margin-bottom: 15px; font-weight: bold; line-height: 1.2; }
         .subtitle { font-size: 1.3em; color: #666; margin-bottom: 30px; font-style: italic; }
-        .main-text { font-size: 1.2em; margin-bottom: 40px; color: #333; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .main-text { font-size: 1.2em; margin-bottom: 40px; color: #333; max-width: 800px; margin-left: auto; margin-right: auto; text-align: left; }
 
         .button-container { display: flex; justify-content: center; margin-top: 40px; }
         .btn { background: #004a99; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.15em; transition: background 0.3s; min-width: 300px; }
@@ -46,14 +42,9 @@
 
 <div class="hero">
     
-    <div class="alignment-block">
-        <img src="joel.jpeg" alt="Joel Spitzer Biography" class="profile-img-block">
-        <div class="headline-sentence">
-            Free resources to help people quit smoking and break
-        </div>
-    </div>
+    <img src="joel.jpeg" alt="Joel Spitzer Biography" class="profile-img-block">
     
-    <h1>the grip of nicotine dependency</h1>
+    <h1>Free resources to help people quit smoking and break the grip of nicotine dependency</h1>
 
     <p class="subtitle">All of Joel's resources are available here at joelspitzer.org</p>
     
