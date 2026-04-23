@@ -4,163 +4,208 @@ HTML
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joel's Library - Nicotine Cessation Resources</title>
+    <title>Joel Spitzer | Smoking Cessation Expert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0;
-            background-color: #f4f7f9;
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
         }
-        /* Navigation Menu */
-        nav {
-            background-color: #2c3e50;
-            padding: 15px 20px;
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        header {
+            background: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            padding: 80px 5%;
+            background: var(--bg-light);
             text-align: center;
         }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        nav a:hover {
-            text-decoration: underline;
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 30px;
         }
-        /* Main Container */
-        .container {
-            background-color: white;
-            padding: 40px;
-            margin: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        /* Top Section with Image */
+
         .profile-section {
+            max-width: 900px;
+            margin: -50px auto 60px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            align-items: flex-start;
-            margin-bottom: 30px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
-        .profile-image {
-            flex: 0 0 250px;
-            max-width: 250px;
+
+        .profile-img {
+            max-width: 100%;
+            height: auto;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 25px;
         }
-        .profile-text {
-            flex: 1;
-            min-width: 300px;
+
+        .cta-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto 60px;
+            padding: 0 5%;
         }
-        /* The "Who is Joel" Box - Updated to Blue */
-        .who-is-joel-box {
-            background-color: #e7f3fe;
-            border-left: 6px solid #2196F3;
-            padding: 25px;
-            margin: 30px 0;
-            border-radius: 0 8px 8px 0;
+
+        .card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
         }
-        .who-is-joel-box h2 {
-            margin-top: 0;
-            color: #0d47a1;
+
+        .card:hover {
+            transform: translateY(-5px);
         }
-        /* Links and Buttons */
-        .resource-links {
-            list-style: none;
-            padding: 0;
-        }
-        .resource-links li {
-            margin-bottom: 15px;
-        }
+
         .btn {
             display: inline-block;
-            background-color: #2196F3;
+            background: var(--accent-color);
             color: white;
-            padding: 12px 24px;
+            padding: 12px 25px;
+            border-radius: 5px;
             text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
+            font-weight: 600;
+            margin-top: 15px;
             transition: background 0.3s;
         }
+
         .btn:hover {
-            background-color: #1976D2;
+            background: #2980b9;
         }
-        .bio-links a {
-            color: #2196F3;
-            text-decoration: none;
-            font-weight: bold;
-            margin-right: 20px;
-        }
-        .bio-links a:hover {
-            text-decoration: underline;
-        }
-        /* Retirement Notice */
+
         .retirement-notice {
-            border-top: 2px solid #eee;
-            margin-top: 40px;
-            padding-top: 20px;
-            font-style: italic;
-            color: #666;
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 5%;
+            text-align: center;
+            border: 1px solid #ffeeba;
         }
-        h1 { color: #2c3e50; margin-top: 0; }
-        @media (max-width: 600px) {
-            .profile-section { flex-direction: column; align-items: center; text-align: center; }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 40px 5%;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            header { flex-direction: column; gap: 15px; }
+            nav a { margin: 0 10px; }
         }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="https://joelspitzer.github.io/test/index.html">Home</a>
-    <a href="https://joelspitzer.github.io/test/resources.html">Resources</a>
-    <a href="https://joelspitzer.wpcomstaging.com/about/">About</a>
-</nav>
+    <header>
+        <a href="#" class="logo">Joel Spitzer</a>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Resources</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
 
-<div class="container">
+    <section class="hero">
+        <h1>Free resources to help people quit smoking and break the grip of nicotine dependency</h1>
+        <p>Expert guidance on ending the uncontrolled use of cigarettes and all nicotine products.</p>
+    </section>
+
     <div class="profile-section">
-        <img src="https://joelspitzer.wpcomstaging.com/wp-content/uploads/2023/04/joel-spitzer.jpg" alt="Joel Spitzer" class="profile-image">
-        <div class="profile-text">
-            <h1>Joel's Library</h1>
-            <p>Far from just following and teaching the commonly held beliefs of the day, he has been a visionary who recognized early on that nicotine was an addiction while the rest of the medical and scientific community contended it was simply a habit.</p>
-            <p>His unique insight allowed him to develop and implement nicotine prevention and intervention strategies that were decades ahead of their time. Participants in his clinics had success in quitting at rates that far exceeded the national average for such programs.</p>
-            
-            <div class="bio-links">
-                <a href="https://joelspitzer.wpcomstaging.com/about/">Professional Biography</a>
-                <a href="https://joelspitzer.wpcomstaging.com/about/">Personal Story</a>
-                <a href="https://joelspitzer.wpcomstaging.com/about/">Articles About Joel</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="who-is-joel-box">
-        <h2>Who is Joel?</h2>
-        <p>Access the core materials for understanding and overcoming nicotine addiction:</p>
-        <ul class="resource-links">
-            <li>
-                <strong>Daily Tip Sheet:</strong> 
-                <a href="https://whyquit.com/joel/Joel_03_01_tip_sheet.html" class="btn">View Tip Sheet</a>
-            </li>
-            <li>
-                <strong>Educational Resources:</strong> 
-                <a href="https://joelspitzer.github.io/test/resources.html" class="btn">Browse Resources</a>
-            </li>
-        </ul>
+        <img src="https://joelspitzer.github.io/test/joel.jpeg" alt="Joel Spitzer" class="profile-img">
+        <p>Joel Spitzer has spent over 40 years developing and presenting smoking cessation and prevention programs. His resources are provided free of charge to help anyone reclaim their health and freedom from nicotine.</p>
     </div>
 
     <div class="retirement-notice">
-        <p><strong>Joel Spitzer has retired from doing all online support.</strong></p>
-        <p>All of his resources are still available here and at WhyQuit.com to ensure that life-saving information remains accessible to everyone.</p>
-        <p><a href="https://joelspitzer.wpcomstaging.com/about/">Learn more about Joel Spitzer here.</a></p>
+        <strong>Notice:</strong> Joel Spitzer has retired from providing online support, but all of his educational resources remain free and available below.
     </div>
-</div>
 
-<footer style="text-align: center; padding: 20px; color: #888; font-size: 0.8em;">
-    &copy; 2026 Joel's Library. All rights reserved.
-</footer>
+    <div class="cta-container">
+        <div class="card">
+            <h3>Library of Resources</h3>
+            <p>Access hundreds of videos and articles designed to guide you through the quitting process.</p>
+            <a href="#" class="btn">View All Resources</a>
+        </div>
+        <div class="card">
+            <h3>About Joel</h3>
+            <p>Learn more about Joel's background and his decades of experience in the field.</p>
+            <a href="#" class="btn">Read Biography</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Joel Spitzer. All resources are free for personal use.</p>
+    </footer>
 
 </body>
 </html>
