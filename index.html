@@ -1,4 +1,3 @@
-HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +10,7 @@ HTML
     <style>
         :root {
             --primary-color: #2c3e50;
-            --accent-color: #7296d4; /* Matching the blue in your screenshot */
+            --accent-color: #7296d4;
             --text-color: #333;
             --bg-light: #f8f9fa;
             --white: #ffffff;
@@ -32,7 +31,7 @@ HTML
 
         header {
             background: var(--white);
-            padding: 1rem 5%;
+            padding: 1.5rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -42,11 +41,23 @@ HTML
             z-index: 1000;
         }
 
+        .header-brand {
+            display: flex;
+            flex-direction: column;
+        }
+
         .logo {
             font-weight: 700;
             font-size: 1.5rem;
             color: var(--primary-color);
             text-decoration: none;
+            line-height: 1.2;
+        }
+
+        .tagline {
+            font-size: 0.85rem;
+            color: #666;
+            font-weight: 400;
         }
 
         nav a {
@@ -113,7 +124,7 @@ HTML
         }
 
         .card {
-            background: #fbfbfb; /* Light subtle grey from your screenshot */
+            background: #fbfbfb;
             padding: 40px 30px;
             border-radius: 12px;
             text-align: center;
@@ -169,7 +180,7 @@ HTML
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 1.8rem; }
-            header { flex-direction: column; gap: 15px; }
+            header { flex-direction: column; text-align: center; gap: 15px; }
             nav a { margin: 0 10px; }
         }
     </style>
@@ -177,11 +188,14 @@ HTML
 <body>
 
     <header>
-        <a href="#" class="logo">Joel Spitzer</a>
+        <div class="header-brand">
+            <a href="#" class="logo">Joel Spitzer</a>
+            <span class="tagline">A recognized expert in the field of smoking cessation</span>
+        </div>
         <nav>
             <a href="#">Home</a>
-            <a href="#">Resources</a>
-            <a href="#">About</a>
+            <a href="https://joelspitzer.github.io/test/resources.html">Resources</a>
+            <a href="https://joelspitzer.wpcomstaging.com/about/">About</a>
         </nav>
     </header>
 
@@ -199,12 +213,12 @@ HTML
         <div class="card">
             <h3>Library of Resources</h3>
             <p>Access hundreds of videos and articles designed to guide you through the quitting process.</p>
-            <a href="#" class="btn">View All Resources</a>
+            <a href="https://joelspitzer.github.io/test/resources.html" class="btn">View All Resources</a>
         </div>
         <div class="card">
             <h3>About Joel</h3>
             <p>Learn more about Joel's background and his decades of experience in the field.</p>
-            <a href="#" class="btn">Read Biography</a>
+            <a href="https://joelspitzer.wpcomstaging.com/about/" class="btn">Read Biography</a>
         </div>
     </div>
 
